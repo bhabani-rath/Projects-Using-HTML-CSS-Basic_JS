@@ -1,0 +1,301 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>QS5</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap"
+            rel="stylesheet">
+    </head>
+    <body>
+        <form>
+            <h1 class="l1">Enter One Character</h1><br>
+            <section>
+                <section>
+                    <label id="l1">Input</label>
+                    <input type="text" id="inp1">
+                </section>
+                <section>
+                    <label id="l2">Output</label>
+                    <input type="text" id="out1" disabled>
+                </section>
+            </section>
+            <button type="submit">Submit</button>
+        </form>
+        <style>
+            html,body{
+                width: 100vw;
+                height: 100vh;
+                font-size: 36px;
+                font-family: 'Yeon Sung';
+                background: url(assets/bg-vf.jpg);
+                background-position: center;
+                background-repeat: none;
+                background-size: cover;
+                overflow: hidden;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            form{
+                width: 550px;
+                height: 550px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 10%;
+                border: 2px solid black;
+                border-radius: 15px;
+                /* background: transparent; */
+                backdrop-filter: blur(25px);
+            }
+            form h1{
+                text-align: center;
+                color: white;
+                font-size: 38px;
+            }
+            form section{
+                display: flex;
+                flex-direction: column;
+            }
+            form label{
+                color: whitesmoke;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            form #inp1{
+                width: 25px;
+                height: 45px;
+                border-radius: 15px;
+                border: none;
+                font-family: 'Yeon Sung';
+                font-size: 28px;
+                padding:15px 15px 15px 15px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-left: 34%;
+                margin-top: 15px;
+            }
+            form #out1{
+                width: 175px;
+                height: 45px;
+                border: none;
+                background-color: white;
+                border-radius: 15px;
+                cursor: no-drop;
+                margin-top: 15px;
+            }
+            form button{
+                margin-top: 50px;
+                width: 307px;
+                height: 47px;
+                border: none;
+                border-radius: 10px;
+                color: #000;
+                font-size: 28px;
+                font-weight: bold;
+                font-family: 'Yeon Sung';
+                background-color: cornflowerblue;
+            }
+        </style>
+        <script>
+        var char = document.getElementById(inp1);
+        var data;
+        function vowel(char) {
+            if(char === 'a' && char === 'e' || char === 'i' || char === 'o' || char === 'u'){
+                data = 'Given Character Is Vowel.';
+                var output = document.getElementById(out1);
+                output.value = data;
+                return output;
+            }else{
+                if (char >= 'a' || char <= 'z' || char >= 'A' || char <= 'Z' || !vowel(char)) {
+                    data = 'Given Character Is Consonant.'
+                    output = document.getElementById(out1);
+                    output.value = data;
+                    return output;
+                } else {
+                    data = 'Given Character Is Not A Letter.'
+                    output = document.getElementById(out1);
+                    output.value = data;
+                    return output;
+                }
+            }
+        }
+        </script>
+    </body> --> <!-- </html> -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>QS5</title>
+        <link
+            rel="preconnect"
+            href="https://fonts.googleapis.com" />
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap"
+            rel="stylesheet" />
+        <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        font-family: 'Yeon Sung', sans-serif;
+        background: url(assets/bg-vf.jpg);
+        background-position: center;
+        background-repeat: none;
+        background-size: cover;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      form {
+        width: 80%;
+        max-width: 600px;
+        height: auto;
+        margin-top: 10%;
+        border: 2px solid black;
+        border-radius: 15px;
+        backdrop-filter: blur(25px);
+        /* background-color: rgba(255, 255, 255, 0.7); */
+        padding: 20px;
+      }
+
+      form h1 {
+        text-align: center;
+        color: whitesmoke;
+        font-size: 2em;
+      }
+
+      form section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+      }
+
+      form label {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: whitesmoke;
+        font-size: 38px;
+        margin-bottom: 5px;
+      }
+
+      form #inp1,
+      form #out1 {
+        width: 100%;
+        height: 45px;
+        border-radius: 15px;
+        border: 1px solid #333;
+        font-size: 16px;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+
+      form #out1 {
+        cursor: no-drop;
+        margin-top: 10px;
+      }
+
+      form button {
+        width: 100%;
+        height: 47px;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 1.2em;
+        font-weight: bold;
+        background-color: cornflowerblue;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      @media screen and (min-width: 600px) {
+        form {
+          width: 70%;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        form {
+          width: 60%;
+        }
+
+        form h1 {
+          font-size: 2.5em;
+        }
+      }
+
+      @media screen and (min-width: 1024px) {
+        form {
+          width: 50%;
+        }
+
+        form h1 {
+          font-size: 3em;
+        }
+      }
+    </style>
+    </head>
+    <body>
+        <form onsubmit="return false;">
+            <h1 class="l1">Enter One Character</h1><br />
+            <section>
+                <section>
+                    <label id="l1">Input</label>
+                    <input type="text" id="inp1" />
+                </section>
+                <section>
+                    <label id="l2">Output</label>
+                    <input type="text" id="out1" disabled />
+                </section>
+            </section>
+            <button onclick="vowel()">Submit</button>
+        </form>
+        <script>
+      function vowel() {
+        var char = document.getElementById("inp1");
+        var output = document.getElementById("out1");
+        var data;
+
+        if (
+          char.value === "a" ||
+          char.value === "e" ||
+          char.value === "i" ||
+          char.value === "o" ||
+          char.value === "u"
+        ) {
+          data = "Given Character Is Vowel.";
+        } else if (
+          (char.value >= "a" && char.value <= "z") ||
+          (char.value >= "A" && char.value <= "Z")
+        ) {
+          data = "Given Character Is Consonant.";
+        } else {
+          data = "Given Character Is Not A Letter.";
+        }
+
+        output.value = data;
+      }
+    </script>
+    </body>
+</html>

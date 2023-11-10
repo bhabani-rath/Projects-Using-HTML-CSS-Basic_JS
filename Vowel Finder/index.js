@@ -4,16 +4,21 @@ function vowel() {
         var data;
 
         if (
-          char.value === "a" ||
-          char.value === "e" ||
-          char.value === "i" ||
-          char.value === "o" ||
-          char.value === "u"
+            char.value === "a" ||
+            char.value === "e" ||
+            char.value === "i" ||
+            char.value === "o" ||
+            char.value === "u" ||
+            char.value === "A" ||
+            char.value === "E" ||
+            char.value === "I" ||
+            char.value === "O" ||
+            char.value === "U"
         ) {
           data = "Given Character Is Vowel.";
         } else if (
-          (char.value >= "a" && char.value <= "z") ||
-          (char.value >= "A" && char.value <= "Z")
+            (char.value >= "a" && char.value <= "z") ||
+            (char.value >= "A" && char.value <= "Z")
         ) {
           data = "Given Character Is Consonant.";
         } else {

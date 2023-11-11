@@ -60,8 +60,9 @@ form #out1 {
  padding: 10px;
  box-sizing: border-box;
  font-family: "Yeon Sung";
+ border-style: none;
+ outline: none;
 }
-
 form #out1 {
  cursor: no-drop;
  margin-top: 10px;
